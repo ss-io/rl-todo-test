@@ -1,0 +1,10 @@
+@use "../global.scss" as g;
+
+.page-footer {
+  padding: 20px g.$site-mobile-padding;
+
+  &-wrapper {
+    text-align: center;
+  }
+}
+

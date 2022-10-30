@@ -1,0 +1,163 @@
+@use "../global.scss" as g;
+
+// Todo item style
+.todo-item {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media all and (min-width: g.$bp-sm) {
+    flex-direction: row;
+  }
+
+  &-wrapper {
+    padding: 10px;
+    border: none;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 4px solid g.$color-primary-03;
+    transition: all 0.4s ease;
+    background-color: transparent;
+
+    &:hover {
+      border-top: 1px solid g.$color-primary-03;
+      border-right: 1px solid g.$color-primary-03;
+      border-bottom: 1px solid g.$color-primary-03;
+      border-radius: g.$border-radius;
+    }
+  }
+
+  &--left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input[type="checkbox"] {
+      visibility: hidden;
+
+      &:checked + label::before {
+        border-color: g.$color-primary-03;
+        background-color: g.$color-primary-03;
+      }
+    }
+
+    label {
+      width: 100%;
+      display: block;
+      font-size: 20px;
+      cursor: pointer;
+      position: relative;
+      z-index: g.$level-base;
+
+      &.strike-through {
+        text-decoration: line-through;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid g.$color-primary-02;
+        border-radius: g.$border-radius - 16;
+        background-color: transparent;
+        transition: all 0.4 ease;
+      }
+
+      span {
+        display: block;
+        font-size: 12px;
+        color: rgba(g.$color-greyscale-99, 0.3);
+      }
+    }
+  }
+
+  &--right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+
+    @media all and (min-width: g.$bp-sm) {
+      width: auto;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: g.$border-radius - 8;
+      background-color: g.$color-greyscale-02;
+      border: 2px solid g.$color-primary-02;
+      box-shadow: 0 0 5px rgba(g.$color-greyscale-99, 0.5);
+
+      &:active {
+        position: relative;
+        z-index: g.$level-base;
+        top: 1px;
+      }
+    }
+  }
+}
+
+// Todo list style
+.todo-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  list-style: none;
+
+
+  &-wrapper {
+    //border: 1px solid g.$color-primary-01;
+  }
+
+  &-msg {
+    padding: 20px;
+    color: g.$color-primary-04;;
+    text-align: center;
+  }
+
+  &-info {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: g.$color-primary-04;
+    font-size: 14px;
+
+    @media all and (min-width: g.$bp-sm) {
+      flex-direction: row;
+    }
+
+    &--p1 {
+      select {
+        padding: 10px 0;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: g.$color-primary-04;
+      }
+    }
+    &--p2 {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+@use "../global.scss" as g;
+
+.page-header {
+  padding: 20px g.$site-mobile-padding;
+
+  &-wrapper {
+    border-top: 4px solid g.$color-primary-01;
+
+    h1 {
+      font-family: g.$font-heading-family;
+    }
+  }
+}
+

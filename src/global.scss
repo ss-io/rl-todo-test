@@ -1,0 +1,84 @@
+
+// Colors
+$default-bg-color: #f4f4f4;
+$color-primary-01: #ff9b00;
+$color-primary-02: #22276c;
+$color-primary-03: #06f4b1;
+$color-primary-04: #3b4555;
+
+$color-greyscale-00: #ffffff;
+$color-greyscale-01: #fefefe;
+$color-greyscale-02: #f4f4f4;
+$color-greyscale-99: #000000;
+
+$font-default-family: 'DM Sans', sans-serif ;
+$font-heading-family: 'Oswald', sans-serif ;
+
+$border-radius: 20px;
+
+// Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+// Site width
+$site-max-width: 500px;
+$site-mobile-padding: 8vw;
+
+// Z index levels
+$level-base: 0;
+$level-middle: 300;
+$level-top: 600;
+$level-cover: 900;
+
+// Helper for easings
+$easeInCirc: cubic-bezier(0.55, 0, 1, 0.45);
+$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
+$easeInOutCirc: cubic-bezier(0.85, 0, 0.15, 1);
+$easeInQuart: cubic-bezier(0.5, 0, 0.75, 0);
+$easeInExpo: cubic-bezier(0.7, 0, 0.84, 0);
+
+
+/**
+ * ----- GLOBAL STYLE -----
+ */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  //font-size: 62.5%;
+  font-size: 16px;
+  color: $color-primary-04;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: $default-bg-color;
+  background: linear-gradient(-40deg, rgba($color-greyscale-01,1) 0%, rgba($color-greyscale-02,1) 50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.page-wrapper {
+  // overall container style if any
+}
+.page-body {
+}
+
