@@ -4,5 +4,121 @@
   &-wrapper {
   }
 
+  &-form {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: g.$color-greyscale-00;
+    background-color: g.$color-primary-02;
+    border: 2px solid g.$color-primary-02;
+    border-radius: g.$border-radius;
+    transition: all 0.4s ease;
+
+    @media all and (min-width: g.$bp-sm) {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &:hover {
+      border: 2px solid g.$color-primary-03;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      text-align: center;
+      color: g.$color-primary-04;
+      background-color: g.$color-greyscale-02;
+      border-radius: g.$border-radius - 8;
+
+      &::placeholder {
+        opacity: 1;
+        color: g.$color-primary-04;
+        @media all and (min-width: g.$bp-sm) {
+          color: g.$color-greyscale-00;
+        }
+      }
+
+      &:-ms-input-placeholder {
+        color: g.$color-primary-04;
+        @media all and (min-width: g.$bp-sm) {
+          color: g.$color-greyscale-00;
+        }
+      }
+
+      &::-ms-input-placeholder {
+        color: g.$color-primary-04;
+        @media all and (min-width: g.$bp-sm) {
+          color: g.$color-greyscale-00;
+        }
+      }
+
+      @media all and (min-width: g.$bp-sm) {
+        color: g.$color-greyscale-00;
+        width: 60%;
+        color: g.$color-greyscale-00;
+        text-align: left;
+        border: none;
+        outline: none;
+        background-color: transparent;
+      }
+    }//input
+
+    select {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 16px;
+      color: g.$color-primary-04;
+      background-color: g.$color-greyscale-02;
+      border-radius: g.$border-radius - 8;
+
+      @media all and (min-width: g.$bp-sm) {
+        width: auto;
+        color: g.$color-greyscale-00;
+        text-align: left;
+        border: none;
+        outline: none;
+        background-color: transparent;
+      }
+
+      option {
+        color: g.$color-primary-04;
+      }
+    }//select
+
+    button {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      background-color: g.$color-greyscale-02;
+      border-radius: g.$border-radius - 8;
+      border: 2px solid g.$color-primary-02;
+      box-shadow: 0 0 5px rgba(g.$color-greyscale-99, 0.5);
+
+      @media all and (min-width: g.$bp-sm) {
+        width: 40px;
+      }
+
+      &:active {
+        position: relative;
+        z-index: g.$level-base;
+        top: 1px;
+      }
+
+      svg {
+        max-width: 30px;
+        transform: rotate(45deg);
+      }
+    }//button
+  }//form
 }
 
