@@ -12,6 +12,7 @@ function App() {
   const [todo, setTodo] = useState('');
   const [todoList, setTodoList] = useState([]);
   const [todoCount, setTodoCount] = useState(0);
+  const [completedCount, setCompletedCount] = useState(0);
 
   return (
     <div className="page-wrapper">
@@ -32,6 +33,10 @@ function App() {
           <TodoList
             todoList={todoList}
             setTodoList={setTodoList}
+            todoCount={todoCount}
+            setTodoCount={setTodoCount}
+            completedCount={completedCount}
+            setCompletedCount={setCompletedCount}
           />
         </div>
       </div>
