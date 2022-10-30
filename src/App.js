@@ -29,7 +29,10 @@ function App() {
             todoCount={todoCount}
             setTodoCount={setTodoCount}
           />
-          <TodoList />
+          <TodoList
+            todoList={todoList}
+            setTodoList={setTodoList}
+          />
         </div>
       </div>
       <Footer />
