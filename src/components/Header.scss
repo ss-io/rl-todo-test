@@ -9,6 +9,22 @@
     h1 {
       font-family: g.$font-heading-family;
     }
-  }
-}
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 5px 0 5px 30px;
+      }
+    }//ul
+
+    .divider {
+      margin: 50px 0;
+      max-width: 400px;
+      width: 100%;
+      border-top: 1px solid rgba(g.$color-greyscale-99, 0.2);
+    }
+  }//wrapper
+}//page-header
 

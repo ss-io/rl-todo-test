@@ -32,13 +32,6 @@ $level-middle: 300;
 $level-top: 600;
 $level-cover: 900;
 
-// Helper for easings
-$easeInCirc: cubic-bezier(0.55, 0, 1, 0.45);
-$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
-$easeInOutCirc: cubic-bezier(0.85, 0, 0.15, 1);
-$easeInQuart: cubic-bezier(0.5, 0, 0.75, 0);
-$easeInExpo: cubic-bezier(0.7, 0, 0.84, 0);
-
 
 /**
  * ----- GLOBAL STYLE -----
@@ -99,6 +92,6 @@ a {
     color: $color-primary-03;
     background-color: $color-primary-02;
     border-radius: $border-radius - 8;
-  }
-}
+  }//h1
+}//page-body
 
